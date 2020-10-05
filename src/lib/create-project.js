@@ -26,13 +26,20 @@ export default function ({ action, project_name, apollo, git }) {
                     const clone = shell.exec( `git clone -b ${branch} https://github.com/bananasplit-js/bananasplit-js ${project_name}` )
 
                     if ( clone.code === 0 ) {
-                        shell.rm([ `${project_name}/README.md`, `${project_name}/LICENSE` ])
-                        shell.rm( '-rf', `${project_name}/.git` )
-                        shell.rm( '-rf', `${project_name}/.github` )
+                        // Browse to project directory
+                        shell.cd( project_name )
 
-                        if ( git )
-                            shell.exec( `cd ${project_name} && git init` )
-                        ;
+                        shell.rm([ 'LICENSE' ])
+                        shell.mv( '.env.example', '.env' )
+                        shell.exec( 'echo "" > README.md' )
+                        shell.rm( '-rf', '.git' )
+                        shell.rm( '-rf', '.github' )
+
+                        if ( git ) {
+                            shell.exec( `git init` )
+                            shell.exec( 'git checkout -b dev' )
+                            shell.exec( 'git add --all && git commit -am "Start"' )
+                        }
 
                         let infoBox = []
                         
