@@ -6,10 +6,9 @@
   "bin": {
     "bananasplit": "bin/bananasplit"
   },
-  "scripts": {},
   "keywords": [
     "bananasplit",
-    "cli",
+    "client",
     "express",
     "nodejs",
     "template",
