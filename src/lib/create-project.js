@@ -51,7 +51,7 @@ export default function ({ action, project_name, apollo, git }) {
                         infoBox.push( `${ chalk.white('- Template  →') }  ${ chalk.cyanBright( !apollo ? 'express':'express + apollo') }` )
                         infoBox.push( `\n${ chalk.white('- Git       →') }  ${ chalk[ git ? 'green':'red' ]( git ? 'yes':'no' ) }` )
                         infoBox.push( '\n\n' )
-                        infoBox.push( chalk.gray(`Location: ${ shell.pwd().toString() }/${project_name }`) )
+                        infoBox.push( chalk.gray(`Location: ${ shell.pwd().toString() }`) )
 
                         // Info box
                         console.log( boxen(infoBox.join(''), {
