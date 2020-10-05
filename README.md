@@ -7,12 +7,12 @@
 
 ### 1. Express template:
 ```
-npx bananasplit new project-name
+npx bananasplit-js new project-name
 ```
 
 ### 2. Express + Apollo template:
 ```
-npx bananasplit new project-name --apollo|-a
+npx bananasplit-js new project-name --apollo|-a
 ```
 
 ## Arguments
@@ -21,12 +21,12 @@ npx bananasplit new project-name --apollo|-a
 **Additionally** you can pass the values `--git` or `-g` as argument to **automatically init a git repository.**
 
 ```
-npx bananasplit new project-name --git|-g
+npx bananasplit-js new project-name --git|-g
 ```
 
 ### Version
 ```
-bananasplit --version|-v
+bananasplit-js --version|-v
 ```
 
 # License

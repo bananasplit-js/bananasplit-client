@@ -1,10 +1,10 @@
 {
-  "name": "bananasplit",
+  "name": "bananasplit-js",
   "version": "1.0.0",
   "description": "A bananasplit client for command line",
   "main": "src/index.js",
   "bin": {
-    "bananasplit": "bin/bananasplit"
+    "bananasplit-js": "bin/bananasplit-js"
   },
   "keywords": [
     "bananasplit",
