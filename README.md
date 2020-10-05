@@ -22,6 +22,9 @@ npx bananasplit new project-name --apollo|-a
 bananasplit new project-name --git|-g
 ```
 
+# License
+**Bananasplit client** is licensed under `Apache-2.0`. Read the **[LICENSE](https://github.com/bananasplit-js/bananasplit-client/blob/master/LICENSE)**
+
 # Bananasplit-js
 **Bananasplit-js** is a **express.js** superset **template** that bring to you a background to quickly develop your app.
 
