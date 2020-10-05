@@ -1,18 +1,25 @@
-# Bananasplit client
-> A **bananasplit client** for command line.
+<div>
+    <img align="left" src="https://bananasplit.js.org/assets/images/bananasplit-client.svg" width="130" />
+    <h1 align="center">$ Bananasplit client for command line</h1>
+    <p align="center">
+        <img src="https://img.shields.io/badge/npx-package-b9e2e2?style=for-the-badge&logo=npm" />
+    </p>
+</div>
+
+<br />
 
 # Usage
 
 ## Create a new project
 
 ### 1. Express template:
-```
-npx bananasplit-js new project-name
+```bash
+npx bananasplit-js new "project-name"
 ```
 
 ### 2. Express + Apollo template:
-```
-npx bananasplit-js new project-name --apollo|-a
+```bash
+npx bananasplit-js new "project-name" --apollo|-a
 ```
 
 ## Arguments
@@ -20,22 +27,17 @@ npx bananasplit-js new project-name --apollo|-a
 ### Git repository
 **Additionally** you can pass the values `--git` or `-g` as argument to **automatically init a git repository.**
 
-```
-npx bananasplit-js new project-name --git|-g
+```bash
+npx bananasplit-js new "project-name" --git|-g
 ```
 
 ### Version
-```
+```bash
 bananasplit-js --version|-v
 ```
 
 # License
-**Bananasplit client** is licensed under `Apache-2.0`. Read the **[LICENSE](https://github.com/bananasplit-js/bananasplit-client/blob/master/LICENSE)**
-
-# Bananasplit-js
-**Bananasplit-js** is a **express.js** superset **template** that bring to you a background to quickly develop your app.
-
-### Read more: https://bananasplit.js.org/
+**Bananasplit client** is licensed under **`Apache-2.0`**. Read the **[LICENSE](https://github.com/bananasplit-js/bananasplit-client/blob/master/LICENSE)**
 
 ---
-**Bananasplit • 2020**
+**`>_ Bananasplit-js • 2020`**
