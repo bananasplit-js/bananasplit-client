@@ -16,10 +16,17 @@ npx bananasplit new project-name --apollo|-a
 ```
 
 ## Arguments
+
+### Git repository
 **Additionally** you can pass the values `--git` or `-g` as argument to **automatically init a git repository.**
 
 ```
-bananasplit new project-name --git|-g
+npx bananasplit new project-name --git|-g
+```
+
+### Version
+```
+bananasplit --version|-v
 ```
 
 # License
