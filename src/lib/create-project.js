@@ -13,7 +13,7 @@ import chalk from 'chalk'
 import boxen from 'boxen'
 
 
-export default function ({ action, project_name, apollo, git }) {
+export default function ({ action, project_name, apollo=false, git }) {
 
     if ( action ) {
 
