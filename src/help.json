@@ -1,0 +1,9 @@
+{
+    "options": [
+        {
+            "param": "--git, -g",
+            "desc": "Initializes a git repository",
+            "type": "boolean"
+        }
+    ]
+}

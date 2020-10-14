@@ -17,9 +17,7 @@ export default function ( rawArgs ) {
             '--git': Boolean,
             '-g': '--git',
             // '--apollo': Boolean,
-            // '-a': '--apollo',
-            '--version': Boolean,
-            '-v': '--version'
+            // '-a': '--apollo'
         },
         {
             argv: rawArgs.slice(2)
@@ -30,8 +28,7 @@ export default function ( rawArgs ) {
         git: args['--git'] || false,
         // apollo: args['--apollo'] || false,
         action: args._[0],
-        project_name: args._[1],
-        version: args['--version'] || false
+        project_name: args._[1]
     }
 
 }

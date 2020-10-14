@@ -13,6 +13,7 @@ import shell from 'shelljs'
 import chalk from 'chalk'
 
 import { version } from './../package.json'
+import help from './help.json'
 
 import parseArgumentsIntoOptions from './lib/parse-arguments'
 import createBananaProject from './lib/create-project'
@@ -27,13 +28,20 @@ export function cli ( args ) {
     }
 
 
-    let options = parseArgumentsIntoOptions( args )
+    if ( /--version|-v/.test(args[2]) ) {
+        console.log( `\n${chalk.bgYellow.black(` Bananasplit Client v${version.substr(0, 3)} `)}` )
     
-    if ( options.version )
-        console.log( `\n${chalk.bgCyan.black(` Bananasplit Client v${version.substr(0, 3)} `)}` )
+    } else if ( /--help|-h/.test(args[2]) ) {
+        console.log( `\nUsage: ${chalk.yellow('bananasplit-js')} <action> <value> <options>` )
+        console.log( '\nOptions:' )
 
-    else
+        help.options.forEach( option => {
+            console.log( `${chalk.green(option.param)}\t\t${option.desc}\t\t${chalk.gray(`[${option.type}]`)}` )
+        })
+
+    } else {
+        let options = parseArgumentsIntoOptions( args )
         createBananaProject( options )
-    ;
+    }
 
 }
