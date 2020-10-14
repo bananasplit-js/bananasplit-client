@@ -12,15 +12,15 @@
 
 ## Create a new project
 
-### 1. Express template:
+### Express template:
 ```bash
 npx bananasplit-js new "project-name"
 ```
 
-### 2. Express + Apollo template:
+<!-- ### Express + Apollo template:
 ```bash
 npx bananasplit-js new "project-name" --apollo|-a
-```
+``` -->
 
 ## Arguments
 
