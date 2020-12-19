@@ -33,7 +33,7 @@ export default function ({ action, project_name, apollo=false, git }) {
                         shell.mv( '.env.example', '.env' )
                         shell.exec( 'echo "" > README.md' )
                         shell.rm( '-rf', '.git' )
-                        shell.rm( '-rf', '.github' )
+                        //shell.rm( '-rf', '.github' )
 
                         if ( git ) {
                             shell.exec( `git init` )
