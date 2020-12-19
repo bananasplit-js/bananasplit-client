@@ -1,6 +1,6 @@
 <div>
     <img align="left" src="https://bananasplit.js.org/assets/images/bananasplit-client.svg" width="130" />
-    <h1 align="center">$ Bananasplit client for command line</h1>
+    <h1 align="center">bananasplit client for command line</h1>
     <p align="center">
         <img src="https://img.shields.io/badge/npx-package-b9e2e2?style=for-the-badge&logo=npm" />
     </p>
