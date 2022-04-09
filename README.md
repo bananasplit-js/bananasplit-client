@@ -25,7 +25,7 @@ npx bananasplit-js new "project-name" --apollo|-a
 ## Arguments
 
 ### Git repository
-**Additionally** you can pass `--git` or `-g` values as argument to **automatically init a git repository
+**Additionally** you can pass `--git` or `-g` values as argument to **automatically init a git repository**
 
 ```bash
 npx bananasplit-js new "project-name" --git
