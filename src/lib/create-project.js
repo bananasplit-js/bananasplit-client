@@ -47,6 +47,7 @@ export default function ({ action, project_name, apollo=false, git }) {
 
               // Replace project name
               readmeTemplateData = readmeTemplateData.replace("@project-name", project_name)
+              readmeTemplateData = readmeTemplateData.replace("@year", new Date().getFullYear())
 
               // Write changes into new README.md in project directory
               fs.writeFileSync(

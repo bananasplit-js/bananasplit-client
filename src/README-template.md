@@ -28,7 +28,7 @@ yarn dev | npm run dev
 
 **Read more about configuration:** https://bananasplit.js.org/docs/#config
 
-<a href="http://gitpod.io/#https://github.com/buskerone/nocv-backend/" target="_blank">
+<a href="http://gitpod.io/#add-repository-url" target="_blank">
   <img src="https://gitpod.io/button/open-in-gitpod.svg" alt="">
 </a>
 
@@ -40,4 +40,4 @@ yarn dev | npm run dev
 **Bananasplit-js** is licensed under **[MIT](https://github.com/bananasplit-js/bananasplit-js/blob/main/template/LICENSE)**
 
 ---
-![label](https://img.shields.io/badge/2022-bananasplit--js-yellow?style=for-the-badge)
+![label](https://img.shields.io/badge/@year-bananasplit--js-yellow?style=for-the-badge)
