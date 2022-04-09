@@ -9,6 +9,8 @@
  */
 
 import shell from 'shelljs'
+import path from "path"
+import fs from "fs"
 
 import chalk from 'chalk'
 import boxen from 'boxen'
@@ -18,6 +20,9 @@ export default function ({ action, project_name, apollo=false, git }) {
     switch (action) {
       case 'new':
         if (project_name) {
+          project_name = project_name.toLowerCase()
+
+          // Just an empty space at the bgginning
           console.log()
 
           const branch = !apollo ? 'main/template':'main/apollo'
@@ -28,12 +33,33 @@ export default function ({ action, project_name, apollo=false, git }) {
             shell.cd(project_name)
 
             shell.mv('.env.example', '.env')
-            shell.exec('echo "" > README.md')
             shell.rm('-rf', '.git')
             shell.rm('-rf', '.github')
             shell.rm("public/.gitignore")
             shell.rm("src/providers/addons/.gitignore")
 
+            try {
+              // Write README for developers
+              let readmeTemplateData = fs.readFileSync(
+                path.resolve(__dirname, "../README-template.md"),
+                { encoding:'utf8', flag:'r' }
+              )
+
+              // Replace project name
+              readmeTemplateData = readmeTemplateData.replace("@project-name", project_name)
+
+              // Write changes into new README.md in project directory
+              fs.writeFileSync(
+                path.resolve(process.cwd(), "README.md"),
+                readmeTemplateData
+              )
+
+            } catch (e) {
+              console.log(chalk.red("\nCould not create README.md file\n"))
+              console.log(e)
+            }
+
+            // Create main branch, then commit
             if (git) {
               shell.exec(`git init`)
               shell.exec('git checkout -b main')
