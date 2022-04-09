@@ -45,12 +45,12 @@ export default function ({ action, project_name, apollo=false, git }) {
             // Message output
             infoBox.push(chalk.bold.green('New project!'))
             infoBox.push('\n\n' )
-            infoBox.push(`${ chalk.white('- Name      →') }  ${ chalk.yellow(project_name) }`)
+            infoBox.push(`${chalk.white('- Name      →')}  ${chalk.yellow(project_name)}`)
             infoBox.push('\n' )
-            infoBox.push(`${ chalk.white('- Template  →') }  ${ chalk.cyanBright( !apollo ? 'express':'express + apollo') }`)
-            infoBox.push(`\n${ chalk.white('- Git       →') }  ${ chalk[ git ? 'green':'red' ]( git ? 'yes':'no' ) }`)
+            infoBox.push(`${chalk.white('- Template  →')}  ${chalk.cyanBright( !apollo ? 'express':'express + apollo')}`)
+            infoBox.push(`\n${ chalk.white('- Git       →') }  ${chalk[git ? 'green':'red'](git ? 'yes':'no')}`)
             infoBox.push('\n\n')
-            infoBox.push(chalk.gray(`Location: ${ shell.pwd().toString() }`))
+            infoBox.push(chalk.gray(`Location: ${shell.pwd().toString()}`))
 
             // Info box
             console.log(
@@ -64,7 +64,7 @@ export default function ({ action, project_name, apollo=false, git }) {
             )
 
           } else {
-            console.log(`\n${chalk.bgRed.white(` ${chalk.bold.white('Error:')} The project could not be created `)}`)
+            console.log(`\n${chalk.bgRed.black(` ${chalk.bold.black('Error:')} The project could not be created `)}`)
             break
           }
 
@@ -75,10 +75,10 @@ export default function ({ action, project_name, apollo=false, git }) {
         break
 
       default:
-        console.log(chalk.bgRed.white(`\n ${chalk.bold(action)} is not an action `))
+        console.log(chalk.bgRed.black(`\n ${chalk.bold(action)} is not an action `))
     }
 
   } else {
-    console.log(chalk.bgRed.white('\n Action is required '))
+    console.log(chalk.bgRed.black('\n Action is required '))
   }
 }
