@@ -1,6 +1,6 @@
 {
   "name": "bananasplit-js",
-  "version": "1.4.1",
+  "version": "1.5.0",
   "description": "A bananasplit client for command line",
   "main": "src/index.js",
   "bin": {
@@ -26,5 +26,10 @@
     "chalk": "^4.1.0",
     "esm": "^3.2.25",
     "shelljs": "^0.8.4"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^16.2.3",
+    "@commitlint/config-conventional": "^16.2.1",
+    "husky": "^7.0.4"
   }
 }
