@@ -2,7 +2,7 @@
  *
  *  Bananasplit client
  *
- *  @version 1.5.0
+ *  @version 1.5.1
  *
  *  @author diegoulloao
  *  @license Apache 2.0

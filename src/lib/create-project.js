@@ -55,7 +55,7 @@ export default function ({ action, project_name, apollo = false, git }) {
 
               // Overwrite existents keys
               localPackageJSON.name = project_name
-              localPackageJSON.version = 'v1.0.0'
+              localPackageJSON.version = '1.0.0'
               localPackageJSON.description =
                 'A server application built with Bananasplit-js!'
 
