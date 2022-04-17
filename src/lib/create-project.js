@@ -41,6 +41,52 @@ export default function ({ action, project_name, apollo = false, git }) {
             shell.rm('public/.gitignore')
             shell.rm('src/providers/addons/.gitignore')
 
+            // Update package.json
+            const localPackageJSONPath = path.resolve(
+              process.cwd(),
+              'package.json'
+            )
+
+            let localPackageJSON = null
+
+            try {
+              // Import package.json
+              localPackageJSON = require(localPackageJSONPath)
+
+              // Overwrite existents keys
+              localPackageJSON.name = project_name
+              localPackageJSON.version = 'v1.0.0'
+              localPackageJSON.description =
+                'A server application built with Bananasplit-js!'
+
+              // Delete unnecessary
+              delete localPackageJSON.repository
+              delete localPackageJSON.bugs
+              delete localPackageJSON.homepage
+            } catch (e) {
+              console.warn(
+                chalk.yellow(
+                  '\nCould not read package.json to update it. Please do it manually.'
+                )
+              )
+            }
+
+            // If local package.json was loaded, try to write the changes applied
+            if (localPackageJSON) {
+              try {
+                fs.writeFileSync(
+                  localPackageJSONPath,
+                  JSON.stringify(localPackageJSON, null, 2)
+                )
+              } catch (e) {
+                console.warn(
+                  chalk.yellow(
+                    '\nCould not update package.json. Please do it manually.'
+                  )
+                )
+              }
+            }
+
             try {
               // Write README for developers
               let readmeTemplateData = fs.readFileSync(
