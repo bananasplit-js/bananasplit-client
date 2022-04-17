@@ -1,4 +1,4 @@
-<p align="center"><img src="https://bananasplit.js.org/assets/images/bananasplit-logo.png" width="100"></p>
+<p align="center"><img src="https://bananasplit.js.org/assets/images/bananasplit-logo.png" width="120"></p>
 <h1 style="margin:25px" align="center"><a href="https://bananasplit.js.org/">Bananasplit-js</a> / @project-name</h1>
 
 <p align="center">
@@ -7,7 +7,7 @@
     <!-- <img src="https://img.shields.io/badge/graphql-apollo-blue?logo=graphql"> -->
     <img src="https://img.shields.io/badge/orm-sequelize-blue">
     <img src="https://img.shields.io/badge/test-jest-green?logo=jest">
-    <img src="https://img.shields.io/badge/version-v2.0.0-orange">
+    <img src="https://img.shields.io/badge/bananasplit--js-v2.0.0-orange">
     <img src="https://img.shields.io/badge/license-MIT-blue">
 </p>
 
@@ -15,7 +15,7 @@
 
 ### 1. Build the stack
 **Add your database access to `.env`**
-<sub><sup><a href="https://github.com/bananasplit-js/bananasplit-client/blob/master/README.md" target="_blank"> (example)</a></sup></sub>
+<sub><sup><a href="https://gist.github.com/diegoulloao/0bec57a988532e890146d57409076277#file-env" target="_blank"> (example)</a></sup></sub>
 
 ```bash
 yarn build:stack | npm run build:stack
